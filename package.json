@@ -31,7 +31,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "cls",
+  "name": "@jikanban/cls",
   "author": "maxwowo",
   "module": "dist/cls.esm.js",
   "size-limit": [
