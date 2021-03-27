@@ -1,6 +1,6 @@
 # cls
 
-A tiny utility for conditionally joining `className` strings. Also serves as a faster and smaller drop-in replacement for the `classnames` module.
+A simple utility for conditionally joining `className` strings. Also serves as a faster and smaller drop-in replacement for the `classnames` module.
 
 ## Install
 
