@@ -1,7 +1,7 @@
 import cls from '../src';
 
 describe('cls', () => {
-  it('keeps object keys with truthy values', function() {
+  it('keeps object keys with truthy values', () => {
     expect(
       cls({
         a: true,
@@ -14,60 +14,60 @@ describe('cls', () => {
     ).toBe('a f');
   });
 
-  it('joins arrays of class names and ignore falsy values', function() {
+  it('joins arrays of class names and ignore falsy values', () => {
     expect(cls('a', 0, null, undefined, true, 1, 'b')).toBe('a 1 b');
   });
 
-  it('supports heterogenous arguments', function() {
+  it('supports heterogenous arguments', () => {
     expect(cls({ a: true }, 'b', 0)).toBe('a b');
   });
 
-  it('should be trimmed', function() {
+  it('should be trimmed', () => {
     expect(cls('', 'b', {}, '')).toBe('b');
   });
 
-  it('returns an empty string for an empty configuration', function() {
+  it('returns an empty string for an empty configuration', () => {
     expect(cls({})).toBe('');
   });
 
-  it('supports an array of class names', function() {
+  it('supports an array of class names', () => {
     expect(cls(['a', 'b'])).toBe('a b');
   });
 
-  it('joins array arguments with string arguments', function() {
+  it('joins array arguments with string arguments', () => {
     expect(cls(['a', 'b'], 'c')).toBe('a b c');
     expect(cls('c', ['a', 'b'])).toBe('c a b');
   });
 
-  it('handles multiple array arguments', function() {
+  it('handles multiple array arguments', () => {
     expect(cls(['a', 'b'], ['c', 'd'])).toBe('a b c d');
   });
 
-  it('handles arrays that include falsy and true values', function() {
+  it('handles arrays that include falsy and true values', () => {
     expect(cls(['a', 0, null, undefined, false, true, 'b'])).toBe('a b');
   });
 
-  it('handles arrays that include arrays', function() {
+  it('handles arrays that include arrays', () => {
     expect(cls(['a', ['b', 'c']])).toBe('a b c');
   });
 
-  it('handles arrays that include objects', function() {
+  it('handles arrays that include objects', () => {
     expect(cls(['a', { b: true, c: false }])).toBe('a b');
   });
 
-  it('handles deep array recursion', function() {
+  it('handles deep array recursion', () => {
     expect(cls(['a', ['b', ['c', { d: true }]]])).toBe('a b c d');
   });
 
-  it('handles arrays that are empty', function() {
+  it('handles arrays that are empty', () => {
     expect(cls('a', [])).toBe('a');
   });
 
-  it('handles nested arrays that have empty nested arrays', function() {
+  it('handles nested arrays that have empty nested arrays', () => {
     expect(cls('a', [[]])).toBe('a');
   });
 
-  it('handles all types of truthy and falsy property values as expected', function() {
+  it('handles all types of truthy and falsy property values as expected', () => {
     expect(
       cls({
         // Falsy
