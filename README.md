@@ -23,13 +23,13 @@ cls('foo', 'bar')
 cls('foo', { bar: true })
 // => 'foo bar'
 
-cls({'foo-bar': true})
+cls({ 'foo-bar': true })
 // => 'foo-bar'
 
-cls({'foo-bar': false})
+cls({ 'foo-bar': false })
 // => ''
 
-cls({foo: true}, {bar: true})
+cls({ foo: true }, { bar: true })
 // => 'foo bar'
 
 cls({ foo: true, bar: true })
