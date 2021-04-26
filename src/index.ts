@@ -72,7 +72,7 @@ const cls = (...args: ClassValue[]): string => {
 
       if (className) {
         classNames && (classNames += ' ');
-        classNames += toClassName(arg).trim();
+        classNames += className.trim();
       }
     }
   }
