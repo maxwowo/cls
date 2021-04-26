@@ -49,7 +49,7 @@ const toClassName = (classValue: ClassValue): string => {
   }
 
   if (typeof classValue === 'string') {
-    return classValue;
+    return classValue.trim();
   }
 
   if (typeof classValue === 'number') {
@@ -72,7 +72,7 @@ const cls = (...args: ClassValue[]): string => {
 
       if (className) {
         classNames && (classNames += ' ');
-        classNames += className.trim();
+        classNames += className;
       }
     }
   }
