@@ -32,7 +32,7 @@
     "trailingComma": "es5",
     "endOfLine": "auto"
   },
-  "name": "@jikanban/cls",
+  "name": "@maxwowo/cls",
   "author": "maxwowo",
   "module": "dist/cls.esm.js",
   "size-limit": [

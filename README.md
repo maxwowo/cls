@@ -6,16 +6,16 @@ A simple utility for conditionally joining `className` strings. Also serves as a
 
 ```bash
 # With NPM
-$ npm install --save @jikanban/cls
+$ npm install --save @maxwowo/cls
 
 # With Yarn
-$ yarn add @jikanban/cls
+$ yarn add @maxwowo/cls
 ```
 
 ## Usage
 
 ```typescript
-import cls from '@jikanban/cls'
+import cls from '@maxwowo/cls'
 
 cls('foo', 'bar')
 // => 'foo bar'
