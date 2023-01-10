@@ -1,0 +1,20 @@
+{
+  "extends": ["config:base"],
+  "automergeType": "pr",
+  "prCreation": "immediate",
+  "reviewersFromCodeOwners": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
+}
